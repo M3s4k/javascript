@@ -97,8 +97,27 @@
             Swal.fire({
             
             text: "Olá, " + name + " seu IMC é: " + bmiInteiro + ", "+ bmiText,
-            icon: "info"
+            
             });
+            if (bmi < 18.5) {
+                swal.fire({
+                    text: "Olá, " + name + " seu IMC é: " + bmiInteiro + ", "+ bmiText,
+                    icon: "warning"
+                })
+            } else if (bmi > 29.9) {
+                swal.fire({
+                    text: "Olá, " + name + " seu IMC é: " + bmiInteiro + ", "+ bmiText,
+                    icon: "warning"
+                })
+                
+            }
+            else {
+                swal.fire ({
+                    text: "Olá, " + name + " seu IMC é: " + bmiInteiro + ", "+ bmiText,
+                    icon: "success"
+                })
+                
+            }
             
                
        
